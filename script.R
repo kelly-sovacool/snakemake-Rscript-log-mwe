@@ -1,7 +1,4 @@
 if (length(snakemake@log) != 0) {
-  print('snakemake:')
-  print(snakemake)
-  print(length(snakemake@log))
   log_filepath <- snakemake@log[1][[1]]
   log <- file(log_filepath, open = "wt")
   sink(log, append = TRUE)
